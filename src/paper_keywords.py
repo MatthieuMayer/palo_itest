@@ -45,6 +45,8 @@ class Keywords:
         self.paper_content = ''
         # the number of keywords to extract
         self.nb_keywords = n
+        # the wordcloud image
+        self.wordcloud_im = None
         # the display element to return
         self.display = ''
 
@@ -68,8 +70,7 @@ class Keywords:
         # generate a word cloud
         wordcloud.generate(self.paper_content)
         # visualize the word cloud
-        plt.imshow(wordcloud.to_image())
-        plt.axis("off")
+        wordcloud.to_file('wordcloud.png')
 
     def find_keywords(self):
         """Find and return n keywords from the paper content."""
@@ -78,9 +79,9 @@ class Keywords:
         # extract n keywords from values
         main_kw = [val[0] for val in values][0:self.nb_keywords]
         # update display element to return for API
-        self.display = "{} MAIN KEYWORDS FROM PAPER: \"{}\" \n".format(str(self.nb_keywords), self.paper_title)
+        self.display = "{} MAIN KEYWORDS FROM PAPER: \"{}\" <br/>".format(str(self.nb_keywords), self.paper_title)
         for i in range(len(main_kw)):
-            self.display = self.display + "  #" + str(i + 1) + ". " + main_kw[i] + "\n"
+            self.display = self.display + "  #" + str(i + 1) + ". " + main_kw[i] + "<br/>"
 
     def remove_pdf(self):
         """Checks if pdf file exists and deletes it from working directory."""

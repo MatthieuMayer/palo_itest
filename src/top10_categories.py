@@ -99,9 +99,9 @@ class Top10:
         # extract top 10 categories
         top10_cat = list(df['categories'].value_counts()[0:10].index)
         # display list as proper text
-        self.display = "TOP 10 CATEGORIES FOR YEAR {}: \n".format(str(year))
+        self.display = "TOP 10 CATEGORIES FOR YEAR {}: <br/>".format(str(year))
         for i in range(len(top10_cat)):
-            self.display = self.display + "  #" + str(i + 1) + ": " + top10_cat[i] + "\n"
+            self.display = self.display + "  #" + str(i + 1) + ": " + top10_cat[i] + "<br/>"
 
 
 # --------------------------------------------- Top10 Class main function -------------------------------------------- #
