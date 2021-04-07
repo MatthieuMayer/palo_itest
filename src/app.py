@@ -3,7 +3,6 @@
 # ------------------------------------------ Module Imports & Definitions -------------------------------------------- #
 
 # Standard package(s) import ----------------------------------------------------------------------
-import os
 import flask
 from flask import send_file
 

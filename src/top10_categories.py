@@ -4,8 +4,6 @@
 
 # Standard package(s) import ----------------------------------------------------------------------
 import json
-from builtins import str, range, len, list
-
 import pandas as pd
 import re
 import sqlite3 as sl

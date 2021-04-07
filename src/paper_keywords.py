@@ -4,7 +4,6 @@
 
 # Standard package(s) import ----------------------------------------------------------------------
 import os
-import matplotlib.pyplot as plt
 import arxiv
 from pdfminer.high_level import extract_text
 import wordcloud as wcl
@@ -45,8 +44,6 @@ class Keywords:
         self.paper_content = ''
         # the number of keywords to extract
         self.nb_keywords = n
-        # the wordcloud image
-        self.wordcloud_im = None
         # the display element to return
         self.display = ''
 
