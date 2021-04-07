@@ -2,3 +2,4 @@
 .idea/
 /src/wordcloud.png
 /src/__pycache__/
+/data/arxiv.db
