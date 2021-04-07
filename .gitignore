@@ -1,5 +1,4 @@
 /venv/
 .idea/
-/data/arxiv.db
 /src/wordcloud.png
 /src/__pycache__/
